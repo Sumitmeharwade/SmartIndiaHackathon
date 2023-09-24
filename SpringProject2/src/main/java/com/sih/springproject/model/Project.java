@@ -31,5 +31,14 @@ public class Project {
     @OneToMany
     private List<Links> links;
 
+    @OneToMany
+    private List<DirectView> directViews;
+
+    @OneToMany
+    private List<Git> gits;
+
+    @OneToMany
+    private List<Ipynb> ipynbs;
+
 }
 

@@ -4,8 +4,10 @@ import com.sih.springproject.model.Project;
 import com.sih.springproject.repository.ProjectRepository;
 import org.springframework.web.bind.annotation.*;
 
+import static com.sih.springproject.commons.Constants.crossOrigins;
 
-@CrossOrigin(origins = "http://localhost:4200")
+
+@CrossOrigin(origins = crossOrigins)
 @RestController
 @RequestMapping("/Project")
 
