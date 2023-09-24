@@ -9,9 +9,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Details {
+public class Git extends Details{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Long detailsId;
+    private Long gitId;
+
+    @OneToOne
+    private Links link;
 }

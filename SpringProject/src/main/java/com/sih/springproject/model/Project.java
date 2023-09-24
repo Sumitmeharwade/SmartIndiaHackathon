@@ -31,5 +31,8 @@ public class Project {
     @OneToMany
     private List<Links> links;
 
+    @OneToMany
+    private List<Details> details;
+
 }
 
