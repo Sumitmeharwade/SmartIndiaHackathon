@@ -1,4 +1,9 @@
 package com.sih.springproject.model;
 
-public class Git {
+import jakarta.persistence.Column;
+import jakarta.persistence.OneToOne;
+
+public class Git extends Details {
+    @OneToOne
+    private Links links;
 }
