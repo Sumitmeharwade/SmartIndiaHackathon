@@ -13,24 +13,24 @@ public class CommentService {
     @Autowired
     private CommentRepository commentRepository;
 
-    public Comment addCustomer(Comment comment)
+    public Comment addComment(Comment comment)
     {
         return commentRepository.save(comment);
     }
 
-    public Comment modifyCustomer(Comment comment)
+    public Comment modifyComment(Comment comment)
     {
         return commentRepository.save(comment);
     }
 
-    public Comment deleteCustomer(Comment comment)
+    public Comment deleteComment(Comment comment)
     {
         Comment ad=commentRepository.findById(comment.getCommentId()).get();
         commentRepository.delete(comment);
         return ad;
     }
 
-    public Comment findCustomer(Long id)
+    public Comment findComment(Long id)
     {
         return commentRepository.findById(id).get();
     }

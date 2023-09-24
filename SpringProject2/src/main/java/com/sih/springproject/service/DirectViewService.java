@@ -13,24 +13,24 @@ public class DirectViewService {
     @Autowired
     private DirectViewRepository directViewRepository;
 
-    public DirectView addCustomer(DirectView directView)
+    public DirectView addDirectView(DirectView directView)
     {
         return directViewRepository.save(directView);
     }
 
-    public DirectView modifyCustomer(DirectView directView)
+    public DirectView modifyDirectView(DirectView directView)
     {
         return directViewRepository.save(directView);
     }
 
-    public DirectView deleteCustomer(DirectView directView)
+    public DirectView deleteDirectView(DirectView directView)
     {
         DirectView ad=directViewRepository.findById(directView.getDirectViewID()).get();
         directViewRepository.delete(directView);
         return ad;
     }
 
-    public DirectView findCustomer(Long id)
+    public DirectView findDirectView(Long id)
     {
         return directViewRepository.findById(id).get();
     }

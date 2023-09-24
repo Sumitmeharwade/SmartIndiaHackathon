@@ -14,24 +14,24 @@ public class StudentService {
     @Autowired
     private StudentRepository studentRepository;
 
-    public Student addCustomer(Student student)
+    public Student addStudent(Student student)
     {
         return studentRepository.save(student);
     }
 
-    public Student modifyCustomer(Student student)
+    public Student modifyStudent(Student student)
     {
         return studentRepository.save(student);
     }
 
-    public Student deleteCustomer(Student student)
+    public Student deleteStudent(Student student)
     {
         Student ad=studentRepository.findById(student.getUserId()).get();
         studentRepository.delete(student);
         return ad;
     }
 
-    public Student findCustomer(Long id)
+    public Student findStudent(Long id)
     {
         return studentRepository.findById(id).get();
     }

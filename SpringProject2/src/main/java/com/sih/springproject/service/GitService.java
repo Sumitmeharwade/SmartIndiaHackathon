@@ -14,24 +14,24 @@ public class GitService {
     @Autowired
     private GitRepository gitRepository;
 
-    public Git addCustomer(Git git)
+    public Git addGit(Git git)
     {
         return gitRepository.save(git);
     }
 
-    public Git modifyCustomer(Git git)
+    public Git modifyGit(Git git)
     {
         return gitRepository.save(git);
     }
 
-    public Git deleteCustomer(Git git)
+    public Git deleteGit(Git git)
     {
         Git ad=gitRepository.findById(git.getGitId()).get();
         gitRepository.delete(git);
         return ad;
     }
 
-    public Git findCustomer(Long id)
+    public Git findGit(Long id)
     {
         return gitRepository.findById(id).get();
     }

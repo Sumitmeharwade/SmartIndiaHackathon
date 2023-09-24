@@ -15,24 +15,24 @@ public class LinksService {
     @Autowired
     private LinksRepository linksRepository;
 
-    public Links addCustomer(Links links)
+    public Links addLinks(Links links)
     {
         return linksRepository.save(links);
     }
 
-    public Links modifyCustomer(Links links)
+    public Links modifyLinks(Links links)
     {
         return linksRepository.save(links);
     }
 
-    public Links deleteCustomer(Links links)
+    public Links deleteLinks(Links links)
     {
         Links ad=linksRepository.findById(links.getLinkId()).get();
         linksRepository.delete(links);
         return ad;
     }
 
-    public Links findCustomer(Long id)
+    public Links findLinks(Long id)
     {
         return linksRepository.findById(id).get();
     }

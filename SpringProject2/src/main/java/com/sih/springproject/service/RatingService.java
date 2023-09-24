@@ -13,24 +13,24 @@ public class RatingService {
     @Autowired
     private RatingRepository ratingRepository;
 
-    public Rating addCustomer(Rating rating)
+    public Rating addRating(Rating rating)
     {
         return ratingRepository.save(rating);
     }
 
-    public Rating modifyCustomer(Rating rating)
+    public Rating modifyRating(Rating rating)
     {
         return ratingRepository.save(rating);
     }
 
-    public Rating deleteCustomer(Rating rating)
+    public Rating deleteRating(Rating rating)
     {
         Rating ad=ratingRepository.findById(rating.getRatingId()).get();
         ratingRepository.delete(rating);
         return ad;
     }
 
-    public Rating findCustomer(Long id)
+    public Rating findRating(Long id)
     {
         return ratingRepository.findById(id).get();
     }

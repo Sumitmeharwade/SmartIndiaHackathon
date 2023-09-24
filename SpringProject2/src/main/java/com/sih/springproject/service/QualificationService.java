@@ -13,24 +13,24 @@ public class QualificationService {
     @Autowired
     private QualificationRepository qualificationRepository;
 
-    public Qualification addCustomer(Qualification qualification)
+    public Qualification addQualification(Qualification qualification)
     {
         return qualificationRepository.save(qualification);
     }
 
-    public Qualification modifyCustomer(Qualification qualification)
+    public Qualification modifyQualification(Qualification qualification)
     {
         return qualificationRepository.save(qualification);
     }
 
-    public Qualification deleteCustomer(Qualification qualification)
+    public Qualification deleteQualification(Qualification qualification)
     {
         Qualification ad=qualificationRepository.findById(qualification.getQualificationId()).get();
         qualificationRepository.delete(qualification);
         return ad;
     }
 
-    public Qualification findCustomer(Long id)
+    public Qualification findQualification(Long id)
     {
         return qualificationRepository.findById(id).get();
     }

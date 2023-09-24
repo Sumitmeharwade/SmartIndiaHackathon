@@ -13,24 +13,24 @@ public class ProjectService {
     @Autowired
     private ProjectRepository projectRepository;
 
-    public Project addCustomer(Project project)
+    public Project addProject(Project project)
     {
         return projectRepository.save(project);
     }
 
-    public Project modifyCustomer(Project project)
+    public Project modifyProject(Project project)
     {
         return projectRepository.save(project);
     }
 
-    public Project deleteCustomer(Project project)
+    public Project deleteProject(Project project)
     {
         Project ad=projectRepository.findById(project.getProjectId()).get();
         projectRepository.delete(project);
         return ad;
     }
 
-    public Project findCustomer(Long id)
+    public Project findProject(Long id)
     {
         return projectRepository.findById(id).get();
     }

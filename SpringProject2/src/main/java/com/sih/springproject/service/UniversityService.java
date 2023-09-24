@@ -13,24 +13,24 @@ public class UniversityService {
     @Autowired
     private UniversityRepository universityRepository;
 
-    public University addCustomer(University university)
+    public University addUniversity(University university)
     {
         return universityRepository.save(university);
     }
 
-    public University modifyCustomer(University university)
+    public University modifyUniversity(University university)
     {
         return universityRepository.save(university);
     }
 
-    public University deleteCustomer(University university)
+    public University deleteUniversity(University university)
     {
         University ad=universityRepository.findById(university.getUserId()).get();
         universityRepository.delete(university);
         return ad;
     }
 
-    public University findCustomer(Long id)
+    public University findUniversity(Long id)
     {
         return universityRepository.findById(id).get();
     }

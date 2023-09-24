@@ -13,24 +13,24 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User addCustomer(User user)
+    public User addUser(User user)
     {
         return userRepository.save(user);
     }
 
-    public User modifyCustomer(User user)
+    public User modifyUser(User user)
     {
         return userRepository.save(user);
     }
 
-    public User deleteCustomer(User user)
+    public User deleteUser(User user)
     {
         User ad=userRepository.findById(user.getUserId()).get();
         userRepository.delete(user);
         return ad;
     }
 
-    public User findCustomer(Long id)
+    public User findUser(Long id)
     {
         return userRepository.findById(id).get();
     }

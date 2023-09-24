@@ -15,24 +15,24 @@ public class IpynbService {
     @Autowired
     private IpynbRepository ipynbRepository;
 
-    public Ipynb addCustomer(Ipynb ipynb)
+    public Ipynb addIpynb(Ipynb ipynb)
     {
         return ipynbRepository.save(ipynb);
     }
 
-    public Ipynb modifyCustomer(Ipynb ipynb)
+    public Ipynb modifyIpynb(Ipynb ipynb)
     {
         return ipynbRepository.save(ipynb);
     }
 
-    public Ipynb deleteCustomer(Ipynb ipynb)
+    public Ipynb deleteIpynb(Ipynb ipynb)
     {
         Ipynb ad=ipynbRepository.findById(ipynb.getIpynbId()).get();
         ipynbRepository.delete(ipynb);
         return ad;
     }
 
-    public Ipynb findCustomer(Long id)
+    public Ipynb findIpynb(Long id)
     {
         return ipynbRepository.findById(id).get();
     }
