@@ -1,9 +1,7 @@
 package com.sih.springproject.service;
 
 
-import com.sih.springproject.model.Rating;
 import com.sih.springproject.model.University;
-import com.sih.springproject.repository.RatingRepository;
 import com.sih.springproject.repository.UniversityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

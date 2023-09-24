@@ -2,9 +2,7 @@ package com.sih.springproject.service;
 
 
 import com.sih.springproject.model.Qualification;
-import com.sih.springproject.model.Rating;
 import com.sih.springproject.repository.QualificationRepository;
-import com.sih.springproject.repository.RatingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

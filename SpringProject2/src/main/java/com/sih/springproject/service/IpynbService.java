@@ -2,9 +2,9 @@ package com.sih.springproject.service;
 
 
 import com.sih.springproject.model.Ipynb;
-import com.sih.springproject.model.Rating;
+
 import com.sih.springproject.repository.IpynbRepository;
-import com.sih.springproject.repository.RatingRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
