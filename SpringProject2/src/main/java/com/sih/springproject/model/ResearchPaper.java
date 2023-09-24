@@ -4,17 +4,17 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.NaturalIdCache;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Git {
+public class ResearchPaper {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
-    private Long gitID;
-    @OneToOne
-    private Links links;
+    private Long researchId;
+    @Column
+    private String filename;
+
 }

@@ -1,15 +1,18 @@
 package com.sih.springproject.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DirectView extends Details{
+public class DirectView{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Long directViewID;
     @Column
     private String problemStatement;
 
@@ -24,12 +27,6 @@ public class DirectView extends Details{
 
     @Column
     private String implementation;
-
-    @Column
-    private String sampleIO;
-
-    @Column
-    private String references;
 
     @Column
     private String conclusion;

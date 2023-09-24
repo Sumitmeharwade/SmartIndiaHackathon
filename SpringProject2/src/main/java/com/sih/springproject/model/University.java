@@ -1,15 +1,16 @@
 package com.sih.springproject.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
-
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class University extends User{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long universityId;
 
     @OneToMany
     private List<Student> students;
