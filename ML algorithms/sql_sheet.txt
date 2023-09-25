@@ -1,0 +1,23 @@
+-- Insert dummy data for DirectView
+INSERT INTO directview (problemStatement, abstractData, blockDiagram, solution, implementation, conclusion)
+VALUES
+    ('How to improve energy efficiency in residential buildings.', 'The dataset includes energy consumption data from 100 residential buildings in urban areas.',
+    'Dummy Block Diagram 1', 'We propose the implementation of smart energy management systems to optimize energy usage in residential buildings.', 'The smart energy management system was implemented using Raspberry Pi devices and machine learning algorithms.', 'Sample Conclusion 1': 'The implementation of the smart energy management system resulted in a 20% reduction in energy consumption in the test residential buildings.'),
+    ('How to reduce traffic congestion in urban areas during peak hours.', 
+    'The dataset comprises real-time traffic flow and congestion data collected from major city intersections.',
+    'Dummy Block Diagram 2',
+    'We propose the implementation of an intelligent traffic management system to optimize traffic flow and reduce congestion.',
+    'We propose the implementation of an intelligent traffic management system to optimize traffic flow and reduce congestion.',
+    'The implementation of the intelligent traffic management system led to a 30% reduction in average commute times during peak hours');
+
+-- Insert dummy data for Project
+INSERT INTO project (title)
+VALUES
+    ('P1'),
+    ('P2');
+
+-- Insert relationships between DirectView and Project
+INSERT INTO project_directviews (project_id, directview_id)
+VALUES
+    (1, 1), -- Assuming 1 is the project ID and 1 is the directview ID for the first entry
+    (2, 2); -- Assuming 1 is the project ID and 2 is the directview ID for the second entry

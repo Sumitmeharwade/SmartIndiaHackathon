@@ -1,1 +1,0 @@
-print(preprocessed_documents)
