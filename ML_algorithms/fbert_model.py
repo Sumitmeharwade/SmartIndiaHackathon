@@ -76,9 +76,9 @@ x=[
     into the forces of nature without exhausting finite resources or emitting harmful pollutants.
     '''
 ]
-print(check(x))
-# data=check(x)
-# for item in data:
-#     item['Similarity'] = float(item['Similarity'])
-# print(json.dumps(data, indent=4))
+# print(check(x))
+data=check(x)
+for item in data:
+    item['Similarity'] = float(item['Similarity'])
+print(json.dumps(data, indent=4))
 
